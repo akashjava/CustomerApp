@@ -45,12 +45,11 @@ public class Customer {
 		@Email
 		@Column(length=30)
 		private String email;	
-		@NotNull
-		@Pattern(regexp="^[789][0-9]{9}")
+		//@NotNull
+		//@Pattern(regexp="^[789][0-9]{9}")
 		@Column(length=10)
-		private Long mobileNo;
+		private String mobileNo;
 		
-		@NotEmpty
 		@Embedded
 		private Address address;
 		
@@ -102,10 +101,10 @@ public class Customer {
 		public void setEmail(String email) {
 			this.email = email;
 		}
-		public Long getMobileNo() {
+		public String getMobileNo() {
 			return mobileNo;
 		}
-		public void setMobileNo(Long mobileNo) {
+		public void setMobileNo(String mobileNo) {
 			this.mobileNo = mobileNo;
 		}
 		public Address getAddress() {
